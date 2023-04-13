@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>RTO Finder</title>
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-200">
+    <main>
+      <div class="h-64 bg-blue-400">
+        <ul class="uppercase font-bold flex space-x-4 justify-end p-5 text-xs">
+          <li
+            class="hover:text-orange-500"
+            onclick="alert('Created With Jeeva.')"
+          >
+            ABOUT
+          </li>
+
+          <li class="hover:text-orange-500"><a href="">GITHUB</a></li>
+        </ul>
+        <div class="flex flex-col justify-center items-center space-y-3 py-5">
+          <h1 class="font-bold text-xl">RTO Finder</h1>
+          <div class="relative">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="32"
+              viewBox="0 0 24 24"
+              class="absolute top-1.5 left-2 right-0 text-gray-600"
+            >
+              <path
+                fill="currentColor"
+                d="m19.6 21l-6.3-6.3q-.75.6-1.725.95T9.5 16q-2.725 0-4.612-1.888T3 9.5q0-2.725 1.888-4.612T9.5 3q2.725 0 4.612 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l6.3 6.3l-1.4 1.4ZM9.5 14q1.875 0 3.188-1.313T14 9.5q0-1.875-1.313-3.188T9.5 5Q7.625 5 6.312 6.313T5 9.5q0 1.875 1.313 3.188T9.5 14Z"
+              />
+            </svg>
+
+            <input
+              type="search"
+              placeholder="Search number plate"
+              class="text-sm px-10 pr-5 py-2 rounded focus:outline-none uppercase placeholder:normal-case placeholder:tracking-normal tracking-widest"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- result start -->
+      <div class="bg-white m-10 shadow p-5 rounded hidden" id="resultSection">
+        <span class="text-xs"> Your Query: </span
+        ><span class="font-semiblod" id="query">TN34</span>
+
+        <table class="my-5 text-sm w-full">
+          <tbody>
+            <tr>
+              <td class="border p-2 font-semibold">Id</td>
+              <td class="border p-2" id="rto_id">1</td>
+            </tr>
+            <tr>
+              <td class="border p-2 font-semibold">Code</td>
+
+              <td class="border p-2" id="rto_code">TN12</td>
+            </tr>
+            <tr>
+              <td class="border p-2 font-semibold">Location</td>
+              <td class="border p-2" id="rto_location">Chennai North</td>
+            </tr>
+            <tr>
+              <td class="border p-2 font-semibold">Type</td>
+              <td class="border p-2" id="rto_type">RTO</td>
+            </tr>
+            <tr>
+              <td class="border p-2 font-semibold">District</td>
+              <td class="border p-2" id="rto_district">Chennai</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- result end -->
+    </main>
+
+    <script src="./asserts/js/main.js"></script>
+  </body>
+</html>
